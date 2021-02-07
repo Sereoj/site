@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>Page on Sereoj</title>
+   <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+   <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body class="index noselect">
+ 	<div class="mouse-parallax">
+   		<div class="mouse-parallax-bg" id="background-chika"></div>
+	</div>
+  <div class="wrapper">
+    <div class="highlight">Personal Page</div>
+    <br />
+
+    <div id="description"></div>
+    <br />
+
+    <div id="block-1" style='display: none;'>
+      <div class="item"><a href="https://github.com/sereoj">Visit my GitHub Page</a></div>
+      <br />
+    </div>
+
+    <div id="block-2" style='display: none;'>
+    	<div>Check out my <a href="https://github.com/sereoj?tab=repositories">Repositories</a>:</div>
+      <div class="item"><a href="https://github.com/sereoj/DesktopSortWPF">DesktopSortWPF / MVVM / .NET Framework</a></div>
+      <div class="item"><a href="https://github.com/sereoj/FindManager">FindManager / Console / Lib / .NET Framework</a></div>
+      <div class="item"><a href="https://github.com/sereoj/DesktopSort">DesktopSort / MVP / .NET Framework</a></div>
+      <br />
+    </div>
+
+    <div class="anykey" id="pressanykey" style='display: none;'>
+       Press any key to continue
+       <div class="cursor">_</div>
+    </div>
+  </div>
+   
+  <script>
+		var description = "If this is your first time seeing this screen, welcome to my personal page.";
+		var str = description.split("");
+		var el = document.getElementById('description');
+		(function animate() {
+			str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running);
+			var running = setTimeout(animate, 10);
+		})();
+		
+		setTimeout(() => { document.getElementById('block-1').style.display = 'block'; }, 4000);
+		setTimeout(() => { document.getElementById('block-2').style.display = 'block'; }, 5000);
+		setTimeout(() => { document.getElementById('pressanykey').style.display = 'block'; }, 5000);
+	</script>
+   
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+ 	<script src="assets/js/snowscript.js"></script>
+ 	<script src="assets/js/sounds.js"></script>
+	</body>
+
+</html>
